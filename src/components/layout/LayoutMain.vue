@@ -23,7 +23,7 @@
       </div>
     </div>
   </nav>
-  <main class="flex justify-center">
+  <main class="p-6">
     <router-view />
   </main>
 </template>

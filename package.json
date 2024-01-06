@@ -10,7 +10,9 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "axios": "^1.5.0",
+    "@tanstack/vue-query": "^5.17.1",
+    "@tanstack/vue-query-devtools": "^5.17.1",
+    "axios": "^1.6.5",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
