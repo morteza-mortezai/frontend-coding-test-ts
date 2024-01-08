@@ -42,12 +42,18 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'off',
 
     // Disable the following rule, because it's not relevant for the tool chain and test envoirment.
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['tailwind.config.js', 'vite.config.ts'],
-      },
-    ],
+    // 'import/no-extraneous-dependencies': [
+    //   'error',
+    //   {
+    //     devDependencies: ['tailwind.config.js', 'vite.config.ts'],
+    //   },
+    // ],
+    // 'import/no-extraneous-dependencies': [
+    //   'error',
+    //   {
+    //     devDependencies: ['tailwind.config.js', 'vite.config.ts'],
+    //   },
+    // ],
 
     'vue/component-tags-order': [
       'error',
