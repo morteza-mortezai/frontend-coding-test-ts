@@ -2,7 +2,6 @@
   <span v-if="isPending">Loading...</span>
   <span v-else-if="isError">Error: {{ error?.message }}</span>
   <div  v-else-if="data">
-    {{ data.results[0].name }}
     <AppTable v-bind:headers="tableHeaders" v-bind:items="data.results"  >
       <template #name="{ row }">
         <RouterLink v-bind:to="{ name: 'PokemonDetail', params: { name: row.name } }">
@@ -16,8 +15,7 @@
 import { ref } from 'vue'
 import { useQuery } from '@tanstack/vue-query'
 import usePokemon from '../services/pokemon'
-import AppTable from '../components/pages/AppTable.vue'
-
+import AppTable from '../components/common/AppTable.vue';
 // init
 const pokemon = usePokemon()
 
@@ -29,4 +27,4 @@ const { isPending, isFetching, isError, data, error } = useQuery({
 })
 const tableHeaders=['name','url']
 
-</script>
+</script>../components/Common/AppTable.vue

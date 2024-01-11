@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue'
 import { mount, flushPromises } from "@vue/test-utils";
 import AppTable from './AppTable.vue'
 
-describe('component test', async () => {
+describe('AppTable test', async () => {
   const wrapper = mount(AppTable);
   beforeEach(() => {
     wrapper.setProps({
@@ -36,7 +36,7 @@ describe('component test', async () => {
 
 })
 
-describe('slot test', async () => {
+describe('AppTable slot test', async () => {
   const wrapper = mount(AppTable, {
     props: {
       headers: ['name', 'url'],
@@ -46,7 +46,7 @@ describe('slot test', async () => {
       ]
     },
     slots: {
-      name: 'Header',
+      name: 'this is slotted content',
     }
   });
   await flushPromises()
@@ -54,24 +54,8 @@ describe('slot test', async () => {
   test("AppTable Component renders the correct slot", () => {
 
     const items = wrapper.findAll('tbody tr td')
-    expect(items.at(0).text()).toBe('Header')
+    expect(items.at(0).text()).toBe('this is slotted content')
   });
 
 })
 
-
-
-// test('it should work', () => {
-//   const { getByText } = render(AppTable, {
-//     props: {
-//       headers:['name','url'],
-//       items:[
-//         {name:'aa',url:'url'},
-//         {name:'bb',url:'url bb'},
-//     ]
-//     }
-//   })
-
-//   // assert output
-//   getByText('aa')
-// })
