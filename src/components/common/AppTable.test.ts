@@ -1,4 +1,3 @@
-import { render } from '@testing-library/vue'
 import { mount, flushPromises } from "@vue/test-utils";
 import AppTable from './AppTable.vue'
 
@@ -52,7 +51,6 @@ describe('AppTable slot test', async () => {
   await flushPromises()
 
   test("AppTable Component renders the correct slot", () => {
-
     const items = wrapper.findAll('tbody tr td')
     expect(items.at(0).text()).toBe('this is slotted content')
   });
