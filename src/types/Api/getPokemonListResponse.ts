@@ -1,4 +1,4 @@
 import { Pokemon } from "../pokemon"
 import { BaseApiResponse } from "./baseApiResponse"
 
-export type GetPokemonResponse = BaseApiResponse<Pokemon>
+export type GetPokemonListResponse = BaseApiResponse<Pokemon>
